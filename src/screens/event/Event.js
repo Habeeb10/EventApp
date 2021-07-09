@@ -51,6 +51,7 @@ export function Event({ navigation }) {
         title={title}
         description={description}
         onDelete={() => handleDelete(id)}
+        id={id}
       />
     );
   };

@@ -1,8 +1,8 @@
 import React from "react";
-import { View, TextInput, StyleSheet } from "react-native";
+import { View, TextInput, StyleSheet, Text } from "react-native";
 import * as colors from "../common/colors";
 
-export const Input = ({
+export const Textinput = ({
   placeHolder,
   style,
   inputStyle,
@@ -29,21 +29,21 @@ export const Input = ({
 };
 const styles = StyleSheet.create({
   container: {
+    borderWidth: 1,
+    width: "95%",
+    height: 80,
     backgroundColor: colors.wheat,
-    alignSelf: "center",
-    width: "90%",
-    borderRadius: 10,
-    height: 55,
-    marginTop: 15,
-    alignItems: "flex-start",
-    justifyContent: "center",
     borderWidth: 1,
     borderColor: "skyblue",
+    borderRadius: 8,
+    alignSelf: "center",
+    marginTop: 30,
+    paddingHorizontal: 15,
   },
   input: {
     fontSize: 18,
     color: colors.deepblue,
     marginLeft: 15,
-    width: "100%",
+    marginTop: 20,
   },
 });

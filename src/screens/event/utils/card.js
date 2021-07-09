@@ -2,7 +2,10 @@ import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Exit, Vector } from "../../../../assets/svg";
 import * as colors from "../../../common/colors";
-export const MapCard = ({ title, description, onDelete }) => {
+import { useNavigation } from "@react-navigation/core";
+
+export const MapCard = ({ title, description, onDelete, id }) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.vectorbox}>
@@ -19,7 +22,12 @@ export const MapCard = ({ title, description, onDelete }) => {
           <Exit />
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.editbox}>
+        <TouchableOpacity
+          style={styles.editbox}
+          onPress={() =>
+            navigation.navigate("edit", { title, description, id })
+          }
+        >
           <Text style={styles.edit}>EDIT</Text>
         </TouchableOpacity>
       </View>
