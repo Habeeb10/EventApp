@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -10,14 +10,11 @@ import { BASE_URL } from "../../common/constant";
 import { Container } from "../../component/container";
 import { MapCard } from "./utils/card";
 import { Eventstyles as styles } from "./utils/styles";
+import { useNavigation, useFocusEffect } from "@react-navigation/core";
 
 export function Event({ navigation }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   const fetchData = () => {
     setLoading(true);
@@ -43,6 +40,12 @@ export function Event({ navigation }) {
       .catch((err) => err)
       .finally(() => setLoading(false));
   };
+
+  useFocusEffect(
+    React.useCallback(() => {
+      fetchData();
+    }, [])
+  );
 
   const _renderItem = ({ item }) => {
     const { title, description, id } = item;
