@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   button: {
     color: colors.deepblue,
     fontSize: 16,
-    fontWeight: "500",
+
     lineHeight: 24,
   },
 });

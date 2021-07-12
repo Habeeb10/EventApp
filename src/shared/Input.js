@@ -17,7 +17,7 @@ export const Input = ({
         <TextInput
           style={[styles.input, inputStyle]}
           placeholder={placeHolder}
-          placeholderTextColor={colors.deepgray}
+          placeholderTextColor={colors.deepblue}
           value={value}
           keyboardType={type}
           onChangeText={onChange}

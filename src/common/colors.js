@@ -17,3 +17,4 @@ export const black = "#000000";
 export const green = "#4CD964";
 export const lightgreen = "#E0FFE5";
 export const milk = "#FFFAEB";
+export const skyblue = "#87CEEB";
