@@ -41,9 +41,13 @@ export function NewEvent({ navigation }) {
           <Text style={styles.create}>Create New Event</Text>
         </View>
 
-        <Input onChange={setTitle} value={title} />
+        <Input placeHolder="title" onChange={setTitle} value={title} />
 
-        <Input onChange={setDesription} value={description} />
+        <Input
+          placeHolder="description"
+          onChange={setDesription}
+          value={description}
+        />
 
         <Button
           title="Submit"
